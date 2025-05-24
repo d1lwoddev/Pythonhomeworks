@@ -103,4 +103,95 @@ if a==b:
 else:
     print("Not equal")
 #15
+a=input()
+a=a.split()
+b=''
+for i in range(len(a)):
+    b+=a[i][0]
+print(b)
+#16
+a=input("Matn kiritng:")
+b=input("Qaysi belgi olib tashlansin:")
+a=a.split(b)
+c=''
+for i in range(len(a)):
+  c+=a[i]
+print(c)
+#17
+#18
+a=input("Matnni kiriting:")
+a=a.split()
+print("Boshlanadi:", a[0])
+print("Tugaydi: ", a[len(a)-1])
+#BOOLEAN
+#1
+a=input("Usernmae kiriting:")
+b=input("Password kiriting:")
+c=0
+if len(a)>0:
+    c+=1
+if len(b)>0:
+    c+=1
+print(f"{c} tasiga malumot kiritilgan")
+#2
+a=float(input("Birinchi sonni kiiritng:"))
+b=float(input("Ikkinchi sonni kiriting:"))
+if a==b:
+    print("Ikkalasi teng")
+else:
+    print("Teng emas")
+#3
+a=float(input("Birinchi sonni kiiritng:"))
+if a>0:
+    c="The number is positive"
+else:
+    c="The number is not positive"
+if a%2==0:
+    b="The number is even"
+else:
+    b="The number is not even"
+print(f"{c} and {b}")
+
+#4
+a=int(input("Input the first number: "))
+b=int(input("Input the second number: "))
+c=int(input("Innput the third number: "))
+if a==b and b==c:
+    print("All the numbers are equal")
+else:
+    print("All numbers are not equal")
+#5
+a=input("Input a text: ")
+b=input("Input the second text: ")
+if len(a)==len(b):
+    print("They have the same length")
+else:
+    print("They do not have the same length")
     
+#6
+a=int(input("Input an integer: "))
+c=''
+b=''
+if a%3==0:
+    c="It is divisible by 3"
+if a%5==0:
+    b="It is divisible by 5"
+if len(c+b)==0:
+    print("It is not divisible by neither 5 nor 3")
+
+else:
+    print(f"{c} {b}")
+#7
+a=float(input("Input the first integer: "))
+b=float(input("Input the second integer: "))
+if a+b>50.8:
+    print("Their sum is greater than 50.8")
+else:
+    print("Their sum is not greater than 50.8")
+c=float(input("Enter a number: "))
+if 10<c<21:
+    print("This number is between 10 and 20")
+else:
+    print("This number is not between 10 and 20")
+
+
