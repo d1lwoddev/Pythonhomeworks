@@ -14,8 +14,8 @@ a=float(input("Qiymatni kiriting:"))
 print("Metrda:" , a*1000)
 print("Santimetrda:" , a*100000)
 #4
-a=float(input("Birinchi sonni kiriting:"))
-b=float(input("Ikkinchi sonni kiriting:"))
+a=int(input("Birinchi sonni kiriting:"))
+b=int(input("Ikkinchi sonni kiriting:"))
 print("Bo'linmasi:" , int(a//b))
 print("Qoldig'i:" , a%b)
 #5
@@ -36,7 +36,9 @@ a=input("what is your name?")
 b=float(input("When were you born?"))
 print("Your age is" , 2025-b)
 #2
-
+txt = 'LMaasleitbtui'
+print("Malibu")
+print("Lasetti")
 #3
 a=input()
 print("Uzunligi:" ,len(a))
@@ -83,11 +85,8 @@ print("Teskari shakli:" , a[::-1])
 a=input("Gapni kiriting:")
 print("So'zlari soni:" , len(a.split()))
 #11
-a=input()
-if "1" or "2" or "3" or "4" or "5" or "6" or "7" or "8" or "9" or "0" in a:
-    print("Yes")
-else:
-    print("No")
+text = input("Matn kiriting: ")
+print("Raqam bor" if any(char.isdigit() for char in text) else "Raqam yo'q")
 #12
 a=list(map(str,input().split()))
 s=''
