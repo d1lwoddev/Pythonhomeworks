@@ -137,10 +137,8 @@ print(f"{c} tasiga malumot kiritilgan")
 #2
 a=float(input("Birinchi sonni kiiritng:"))
 b=float(input("Ikkinchi sonni kiriting:"))
-if a==b:
-    print("Ikkalasi teng")
-else:
-    print("Teng emas")
+print("Ikkalasi teng" if a==b else "Teng emas")
+
 #3
 a=float(input("Birinchi sonni kiiritng:"))
 if a>0:
@@ -157,17 +155,12 @@ print(f"{c} and {b}")
 a=int(input("Input the first number: "))
 b=int(input("Input the second number: "))
 c=int(input("Innput the third number: "))
-if a==b and b==c:
-    print("All the numbers are equal")
-else:
-    print("All numbers are not equal")
+print("All the numbers are equal" if (a==b and b==c) else "All numbers are not equal")
+
 #5
 a=input("Input a text: ")
 b=input("Input the second text: ")
-if len(a)==len(b):
-    print("They have the same length")
-else:
-    print("They do not have the same length")
+print("They have the same length" if len(a)==len(b) else "They dont have the same length")
     
 #6
 a=int(input("Input an integer: "))
@@ -177,22 +170,12 @@ if a%3==0:
     c="It is divisible by 3"
 if a%5==0:
     b="It is divisible by 5"
-if len(c+b)==0:
-    print("It is not divisible by neither 5 nor 3")
-
-else:
-    print(f"{c} {b}")
+print("It is not divisible by neither 5 nor 3" if len(c+b)==0 else f"{c} {b}")
 #7
 a=float(input("Input the first integer: "))
 b=float(input("Input the second integer: "))
-if a+b>50.8:
-    print("Their sum is greater than 50.8")
-else:
-    print("Their sum is not greater than 50.8")
+print("Their sum is greater than 50.8" if a+b>50.8 else "Their sum is not greater than 50.8")
 c=float(input("Enter a number: "))
-if 10<c<21:
-    print("This number is between 10 and 20")
-else:
-    print("This number is not between 10 and 20")
+print("This number is between 10 and 20" if 10<=c<=20 else "This number is not between 10 and 20")
 
 
