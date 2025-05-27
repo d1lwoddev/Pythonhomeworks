@@ -297,6 +297,169 @@ print(a==a[::-1])
 a = tuple(map(int, input().split()))
 a=list(a)
 print(tuple(sorted(set(a))))
+#SET Tasks
+#1
+s1={'a','b','c','d'}
+s2={'1','2','3','4','5'}
+print(s1.union(s2))
+#2
+print(s1&s2)
+#3
+print(s1.difference(s2))
+#4
+print(s1 in s2)
+#5
+b=input("Input an element for task 5 ")
+print(b in s1)
+#6
+print(len(s1))
+#7
+a=list(map(str,input('enter list for task 7 ').split()))
+print(set(a))
+#8
+s=set(map(str,input("Enter set for task 8 ").split()))
+b=input("Enter an element to remove ")
+if b in s:
+    s.remove(b)
+    print(s)
+else:
+    print("This element is not available in this set")
+#9
+s=set(map(str,input("Enter set for task 9 ").split()))
+s.clear()
+print("Cleared set :", s)
+#10
+s=set(map(str,input("Enter set for task 10 ").split()))
+print(len(s)==0)
+#11
+s1={'a','b','c','d'}
+s2={'1','2','3','4','5'}
+print(s1.symmetric_difference(s2))
+#12
+s=set(map(str,input("Enter set for task 12 ").split()))
+b=input("Input an element for task 12 ")
+if b in s:
+    print("It is already in it ")
+else:
+    s=list(s)
+    s.append(b)
+    print(set(s))
+#13
+s=set(map(str,input("Enter set for task 13 ").split()))
+print(s.pop())
+#14
+s=set(map(str,input("Enter set for task 14 ").split()))
+print(max(s))
+#15
+s=set(map(str,input("Enter set for task 15 ").split()))
+print(min(s))
+#16
+s=set(map(int,input("Enter set for task 16 ").split()))
+s=list(s)
+a=[]
+for i in range(len(s)):
+    if s[i]%2==0:
+        a.append(s[i])
+print(set(a))
+#17
+s=set(map(int,input("Enter set for task 17 ").split()))
+s=list(s)
+a=[]
+for i in range(len(s)):
+    if s[i]%2==1:
+        a.append(s[i])
+print(set(a))
+#18
+a=int(input("Input starting point "))
+b=int(input("Input ending point "))
+print(set(range(a,b)))
+#19
+a=list(map(str,input("Enter the first list for task 19 ").split()))
+b=list(map(str,input("Enter the second list for task 19 ").split()))
+print(set(a+b))
+#20
+s=set(map(int,input("Enter set for task 20 ").split()))
+s2=set(map(int,input("Enter set for task 20 ").split()))
+print(len(s&s2)==0)
+#21
+s=list(map(int,input("Enter list for task 21 ").split()))
+print(list(set(s)))
+#22
+s=list(map(int,input("Enter list for task 22 ").split()))
+print(len(set(s)))
+#23
+import random
+s = {random.randint(1, 100) for _ in range(10)}
+print(s)
+#DICT Tasks
+dict_1 = {"a": 1, "b": 2, "c": 3}
+key_1 = input()
+print(dict_1.get(key_1, "Key not found"))
 
+key_2 = input()
+print(key_2 in dict_1)
 
+print(len(dict_1))
 
+print(list(dict_1.keys()))
+
+print(list(dict_1.values()))
+
+dict_2 = {"d": 4, "e": 5}
+merged_dict = dict_1.copy()
+merged_dict.update(dict_2)
+print(merged_dict)
+
+key_4 = input()
+dict_1.pop(key_4, None)
+print(dict_1)
+
+dict_5 = {}
+print(len(dict_5) == 0)
+
+key_6 = input()
+print({key_6: dict_1.get(key_6)} if key_6 in dict_1 else "Key not found")
+
+key_7 = input()
+value_7 = input()
+dict_1[key_7] = value_7
+print(dict_1)
+
+value_8 = input()
+print(list(key for key, value in dict_1.items() if value == value_8))
+
+keys_list = list(input().split())
+values_list = list(input().split())
+new_dict = dict(zip(keys_list, values_list))
+print(new_dict)
+
+print(any(isinstance(value, dict) for value in dict_1.values()))
+
+nested_dict = {"a": {"x": 10}, "b": {"y": 20}}
+key_9 = input()
+nested_key_9 = input()
+print(nested_dict.get(key_9, {}).get(nested_key_9, "Not Found"))
+
+default_dict = dict.fromkeys(["a", "b", "c"], 0)
+print(default_dict)
+
+print(len(set(dict_1.values())))
+
+sorted_dict_by_key = dict(sorted(dict_1.items()))
+print(sorted_dict_by_key)
+
+sorted_dict_by_value = dict(sorted(dict_1.items(), key=lambda item: item[1]))
+print(sorted_dict_by_value)
+
+filtered_dict = {key: value for key, value in dict_1.items() if value > 1}
+print(filtered_dict)
+
+dict_10 = {"a": 1, "b": 2}
+dict_11 = {"b": 2, "c": 3}
+print(bool(dict_10.keys() & dict_11.keys()))
+
+tuple_12 = (("a", 1), ("b", 2))
+dict_from_tuple = dict(tuple_12)
+print(dict_from_tuple)
+
+print(next(iter(dict_1.items())))
